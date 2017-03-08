@@ -152,22 +152,19 @@
     {
       "syntax": "Git Config/Git Config",
       "rules": [
-        {"file_path": ".*/git/(config)$"},
-        {"file_path": ".*\\\\git\\\\(config)$"}
+        {"file_path": ".*(\\\\|/).*gitconfig(.*)$"},
       ]
     },
     {
       "syntax": "Git Config/Git Ignore",
       "rules": [
-        {"file_path": ".*/git/(ignore)$"},
-        {"file_path": ".*\\\\git\\\\(ignore)$"}
+        {"file_path": ".*(\\\\|/).*gitignore(.*)$"},
       ]
     },
     {
       "syntax": "Generic Config/Generic Config",
       "rules": [
-        {"file_path": ".*/git/(attributes)$"},
-        {"file_path": ".*\\\\git\\\\(attributes)$"}
+        {"file_path": ".*(\\\\|/).*(gitattributes|cfg|conf|desktop)(.*)$"},
       ]
     },    
     {
@@ -190,7 +187,7 @@
       "syntax": "ShellScriptImproved/Shell-Unix-Generic",
       "extensions": ["bash","sh","zsh"],
       "rules": [
-        {"file_path": ".*(\\\\|/)(//.)?(bash|z|profile)(.*)$"},
+        {"file_path": ".*(\\\\|/).*(bash|z|profile)(.*)$"},
         {"interpreter": "bash"},
         {"interpreter": "zsh"}
       ]
@@ -212,8 +209,7 @@
       "syntax": "SSH Config/SSH Config",
       "extensions": ["ssh_config", "sshd_config"],
       "rules": [
-        {"file_path": "$HOME/.ssh"},
-        {"file_path": "/usr/local/etc/ssh"},
+        {"file_path": ".*(\\\\|/).*ssh(.*)$"},
       ]
     },
     {
@@ -249,8 +245,7 @@
       "syntax": "User/Vim.tmLanguage",
       "extensions": ["vimrc","viminfo","vimL","vim","bundle","vimrc.local","vim.bundle.local","vim.local","bundles","editrc","inputrc"],
       "rules": [
-        {"file_path": "Vim\\\\Doc\\\\[a-zA-Z_0-9]*\\.txt$"},
-        {"file_path": ".*\\.vim(rc|rc\\.local|info|L|\\.bundle|\\.bundle\\.local|\\.bundle\\.local|\\.local).*$"}
+         {"file_path": ".*(\\\\|/).*vim(.*)$"},
       ]
     },
     {
